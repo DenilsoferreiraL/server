@@ -6,7 +6,7 @@ import {
 } from 'fastify-type-provider-zod';
 import { createGoalRoute } from './routes/create-goal';
 import { createCompletionRoute } from './routes/create-completion';
-import { getPendingGoalRoute } from './routes/get-pending-goal';
+import { getPendingGoalsRoute } from './routes/get-pending-goals';
 import { getWeekSummaryRoute } from './routes/get-week-summary';
 import fastifyCors from '@fastify/cors';
 
@@ -21,7 +21,7 @@ app.setSerializerCompiler(serializerCompiler);
 
 app.register(createGoalRoute)
 app.register(createCompletionRoute)
-app.register(getPendingGoalRoute)
+app.register(getPendingGoalsRoute)
 app.register(getWeekSummaryRoute)
 
 app
